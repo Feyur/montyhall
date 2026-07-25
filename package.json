@@ -1,0 +1,56 @@
+{
+  "name": "monty-hall-paradox-simulator",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Interactive Monty Hall problem simulator: play the three-door game, run 100/1000 automated rounds and watch the win rate converge to 2/3 for switching.",
+  "keywords": [
+    "monty-hall",
+    "monty-hall-problem",
+    "monty-hall-paradox",
+    "probability",
+    "conditional-probability",
+    "monte-carlo",
+    "simulation",
+    "statistics",
+    "data-visualization",
+    "math-education",
+    "interactive-explainer",
+    "react",
+    "typescript",
+    "vite",
+    "tailwindcss",
+    "recharts"
+  ],
+  "homepage": "https://montyhall.ru/",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Feyur/montyhall.git"
+  },
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
+    "build:offline": "tsc --noEmit && vite build --mode offline && node scripts/name-offline-build.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "recharts": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}

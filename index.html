@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Парадокс Монти Холла — интерактивная симуляция: попробуйте менять двери, смотрите статистику побед и поймите, почему стратегия переключения выигрывает чаще." />
+    <meta name="keywords" content="Парадокс Монти Холла, Monty Hall Paradox, симулятор вероятностей, теория вероятностей, игра в двери, смена двери, интерактивная статистика" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#f97316" />
+    <meta name="application-name" content="Парадокс Монти Холла" />
+    <link rel="canonical" href="https://montyhall.ru/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Парадокс Монти Холла — интерактивный симулятор" />
+    <meta property="og:description" content="Проверьте интуицию в парадоксе Монти Холла, запустите авто-симуляции и увидьте, почему переключение выигрывает вдвое чаще." />
+    <meta property="og:url" content="https://montyhall.ru/" />
+    <meta property="og:site_name" content="Парадокс Монти Холла" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:image" content="https://montyhall.ru/og-image.png" />
+    <meta property="og:image:alt" content="Интерактивный симулятор парадокса Монти Холла с тремя дверями" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Парадокс Монти Холла — интерактивный симулятор" />
+    <meta name="twitter:description" content="Запустите симуляцию, переключайте двери и наблюдайте за статистикой побед." />
+    <meta name="twitter:image" content="https://montyhall.ru/og-image.png" />
+    <meta name="twitter:image:alt" content="Интерактивный симулятор парадокса Монти Холла" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Парадокс Монти Холла — Monty Hall Paradox</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Парадокс Монти Холла — интерактивный симулятор",
+        "alternateName": "Monty Hall Paradox Simulator",
+        "url": "https://montyhall.ru/",
+        "description": "Интерактивная симуляция парадокса Монти Холла: выберите дверь, решите менять выбор или нет и сравните статистику побед для двух стратегий.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any",
+        "inLanguage": ["ru", "en"],
+        "isAccessibleForFree": true,
+        "image": "https://montyhall.ru/og-image.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "RUB"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Парадокс Монти Холла"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Почему в парадоксе Монти Холла выгодно менять дверь?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Первый выбор выигрывает с вероятностью 1/3. Вероятность 2/3 остается на двух других дверях, а ведущий открывает среди них пустую дверь. Поэтому после открытия пустой двери стратегия смены получает шанс 2/3."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Что показывает симулятор парадокса Монти Холла?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Симулятор сравнивает две стратегии: остаться при первом выборе или переключиться на оставшуюся закрытую дверь. При большом числе игр переключение выигрывает примерно в двух случаях из трех."
+            }
+          }
+        ]
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+    />
+    <style>
+      .seo-fallback {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 48px 24px;
+        font-family: Inter, Arial, sans-serif;
+        color: #292524;
+        line-height: 1.65;
+      }
+      .seo-fallback h1,
+      .seo-fallback h2 {
+        color: #1c1917;
+        line-height: 1.2;
+      }
+      .seo-fallback h1 {
+        font-size: 2.2rem;
+        margin: 0 0 16px;
+      }
+      .seo-fallback h2 {
+        font-size: 1.35rem;
+        margin: 32px 0 12px;
+      }
+      .seo-fallback p,
+      .seo-fallback li {
+        font-size: 1rem;
+      }
+      .seo-fallback a {
+        color: #9a3412;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #0c0a09;
+        }
+        .seo-fallback {
+          color: #d6d3d1;
+        }
+        .seo-fallback h1,
+        .seo-fallback h2 {
+          color: #fafaf9;
+        }
+        .seo-fallback a {
+          color: #fdba74;
+        }
+      }
+    </style>
+</head>
+  <body class="transition-colors duration-300">
+    <div id="root">
+      <main class="seo-fallback">
+        <h1>Парадокс Монти Холла — интерактивный симулятор</h1>
+        <p>
+          Парадокс Монти Холла показывает, почему после открытия пустой двери выгоднее сменить первоначальный выбор.
+          В классической задаче за одной из трех дверей находится автомобиль, а за двумя другими — козы.
+          Ведущий знает, где спрятан приз, открывает пустую дверь и предлагает выбрать: остаться при первом решении или переключиться.
+        </p>
+        <h2>Почему стратегия смены выигрывает чаще</h2>
+        <p>
+          При первом выборе шанс угадать приз равен 1/3. Шанс, что автомобиль находится за одной из двух других дверей, равен 2/3.
+          Когда ведущий открывает среди них пустую дверь, вероятность 2/3 переходит к единственной оставшейся закрытой двери.
+          Поэтому смена двери выигрывает примерно в двух случаях из трех, а стратегия "остаться" — примерно в одном случае из трех.
+        </p>
+        <h2>Что можно проверить на сайте</h2>
+        <ul>
+          <li>сыграть вручную в задачу с тремя дверями;</li>
+          <li>сравнить результаты стратегий "сменить дверь" и "остаться";</li>
+          <li>запустить автоматическую симуляцию на 100 или 1000 игр;</li>
+          <li>посмотреть статистику побед и убедиться, что переключение дает шанс около 2/3.</li>
+        </ul>
+        <p>
+          Полная интерактивная версия симулятора доступна на <a href="https://montyhall.ru/">montyhall.ru</a>.
+        </p>
+      </main>
+    </div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
